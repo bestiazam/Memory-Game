@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaddaş Oyunu — Oyna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">🐾 Yaddaş Oyunu</a>
+    <nav>
+      <a href="index.html">Ana səhifə</a>
+      <a href="qaydalar.html">Qaydalar</a>
+      <a href="game.html" class="active">Oyna</a>
+      <!-- Qaranlıq rejim düyməsi (qaranliq.js idarə edir) -->
+      <button class="dark-btn" id="dark-toggle" title="Qaranlıq rejim">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Oyun statistikası -->
+    <section class="stats">
+      <div class="stat"><span class="stat-label">Hərəkət</span><span class="stat-value" id="moves">0</span></div>
+      <div class="stat"><span class="stat-label">Vaxt</span><span class="stat-value" id="time">00:00</span></div>
+      <div class="stat"><span class="stat-label">Tapılan cüt</span><span class="stat-value" id="found">0 / 0</span></div>
+      <div class="stat"><span class="stat-label">🏆 Rekord</span><span class="stat-value" id="record">—</span></div>
+    </section>
+
+    <!-- Oyunçuya qısa mesaj (məs. "Kartları yadda saxla...") -->
+    <p class="message" id="message"></p>
+
+    <!-- Kartlar bura JavaScript ilə əlavə olunur -->
+    <section class="board" id="board"></section>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="restart">↻ Yenidən başla</button>
+      <a href="index.html" class="btn btn-secondary">⚙ Səviyyəni dəyiş</a>
+      <button class="btn btn-secondary" id="sound-toggle">🔊 Səs: açıq</button>
+    </div>
+
+  </main>
+
+  <!-- Qələbə pəncərəsi (əvvəlcə gizlidir) -->
+  <div class="overlay hidden" id="win">
+    <div class="modal">
+      <div class="modal-emoji">😻</div>
+      <h2>Təbriklər!</h2>
+      <p>Bütün cütləri tapdın!</p>
+      <div class="stars" id="stars"></div>
+      <p class="result" id="result"></p>
+      <p class="new-record hidden" id="new-record">🏆 Yeni rekord!</p>
+      <div class="actions">
+        <button class="btn btn-primary" id="play-again">Yenə oyna</button>
+        <a href="index.html" class="btn btn-secondary">Ana səhifə</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <!-- Footerin üstündən baxan pişik (SVG ilə çəkilib) -->
+    <svg class="peek-cat" viewBox="0 0 120 56" aria-hidden="true">
+      <polygon class="cat-body" points="20,34 28,2 50,24" />
+      <polygon class="cat-body" points="70,24 92,2 100,34" />
+      <polygon class="cat-ear" points="27,26 31,12 42,24" />
+      <polygon class="cat-ear" points="78,24 89,12 93,26" />
+      <ellipse class="cat-body" cx="60" cy="58" rx="44" ry="38" />
+      <ellipse class="cat-eye" cx="44" cy="44" rx="5" ry="7" />
+      <ellipse class="cat-eye" cx="76" cy="44" rx="5" ry="7" />
+      <polygon class="cat-ear" points="56,52 64,52 60,56" />
+    </svg>
+    <p>© 2026 Yaddaş Oyunu · Veb saytların hazırlanması fənni üzrə kurs işi</p>
+  </footer>
+
+  <script src="qaranliq.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

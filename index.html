@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaddaş Oyunu — Ana səhifə</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Saytın başlığı və menyu -->
+  <header class="site-header">
+    <a href="index.html" class="logo">🐾 Yaddaş Oyunu</a>
+    <nav>
+      <a href="index.html" class="active">Ana səhifə</a>
+      <a href="qaydalar.html">Qaydalar</a>
+      <a href="game.html">Oyna</a>
+      <!-- Qaranlıq rejim düyməsi (qaranliq.js idarə edir) -->
+      <button class="dark-btn" id="dark-toggle" title="Qaranlıq rejim">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Giriş bölməsi -->
+    <section class="hero">
+      <div class="hero-cards">
+        <div class="mini-card">🐱</div>
+        <div class="mini-card back"></div>
+        <div class="mini-card">🐱</div>
+      </div>
+      <h1>Yaddaşını sına!</h1>
+      <p>Kartları aç, eyni şəkilləri tap və bütün cütləri ən az hərəkətlə birləşdir.</p>
+    </section>
+
+    <!-- Oyun parametrləri: forma seçimləri game.html səhifəsinə göndərir -->
+    <section class="panel">
+      <h2>Oyunu qur</h2>
+
+      <form action="game.html" method="get">
+
+        <fieldset>
+          <legend>Neçə cüt kart olsun?</legend>
+          <div class="options">
+            <label><input type="radio" name="pairs" value="5" checked><span>5 cüt</span></label>
+            <label><input type="radio" name="pairs" value="6"><span>6 cüt</span></label>
+            <label><input type="radio" name="pairs" value="7"><span>7 cüt</span></label>
+            <label><input type="radio" name="pairs" value="8"><span>8 cüt</span></label>
+            <label><input type="radio" name="pairs" value="9"><span>9 cüt</span></label>
+            <label><input type="radio" name="pairs" value="10"><span>10 cüt</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mövzu seç</legend>
+          <div class="options">
+            <label><input type="radio" name="theme" value="pisikler" checked><span>🐱 Pişiklər</span></label>
+            <label><input type="radio" name="theme" value="heyvanlar"><span>🐶 Heyvanlar</span></label>
+            <label><input type="radio" name="theme" value="meyveler"><span>🍓 Meyvələr</span></label>
+            <label><input type="radio" name="theme" value="kosmos"><span>🚀 Kosmos</span></label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Oyuna başla ▶</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <!-- Footerin üstündən baxan pişik (SVG ilə çəkilib) -->
+    <svg class="peek-cat" viewBox="0 0 120 56" aria-hidden="true">
+      <polygon class="cat-body" points="20,34 28,2 50,24" />
+      <polygon class="cat-body" points="70,24 92,2 100,34" />
+      <polygon class="cat-ear" points="27,26 31,12 42,24" />
+      <polygon class="cat-ear" points="78,24 89,12 93,26" />
+      <ellipse class="cat-body" cx="60" cy="58" rx="44" ry="38" />
+      <ellipse class="cat-eye" cx="44" cy="44" rx="5" ry="7" />
+      <ellipse class="cat-eye" cx="76" cy="44" rx="5" ry="7" />
+      <polygon class="cat-ear" points="56,52 64,52 60,56" />
+    </svg>
+    <p>© 2026 Yaddaş Oyunu · Veb saytların yaradılması fənni üzrə sərbəst iş</p>
+  </footer>
+
+  <script src="qaranliq.js"></script>
+</body>
+</html>

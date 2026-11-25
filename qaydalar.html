@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaddaş Oyunu — Qaydalar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">🐾 Yaddaş Oyunu</a>
+    <nav>
+      <a href="index.html">Ana səhifə</a>
+      <a href="qaydalar.html" class="active">Qaydalar</a>
+      <a href="game.html">Oyna</a>
+      <!-- Qaranlıq rejim düyməsi (qaranliq.js idarə edir) -->
+      <button class="dark-btn" id="dark-toggle" title="Qaranlıq rejim">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="page-title">
+      <h1>Necə oynamalı?</h1>
+      <p>Qaydalar sadədir, amma diqqətli olmaq lazımdır 😼</p>
+    </section>
+
+    <!-- Qaydalar -->
+    <section class="panel">
+      <h2>Qaydalar</h2>
+      <ol class="rules">
+        <li>Oyun başlayanda bütün kartlar 2 saniyə açıq göstərilir, sonra bağlanır.</li>
+        <li>Hər dəfə iki kart açırsan.</li>
+        <li>Şəkillər eynidirsə, kartlar açıq qalır.</li>
+        <li>Fərqlidirsə, kartlar yenidən bağlanır, onların yerini yadda saxla!</li>
+        <li>Bütün cütləri tapanda oyun bitir.</li>
+      </ol>
+    </section>
+
+    <!-- Səviyyələr cədvəli -->
+    <section class="panel">
+      <h2>Səviyyələr</h2>
+      <table class="levels">
+        <thead>
+          <tr><th>Cüt sayı</th><th>Kart sayı</th><th>Çətinlik</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>5–6</td><td>10–12</td><td>😺 Asan</td></tr>
+          <tr><td>7–8</td><td>14–16</td><td>😼 Orta</td></tr>
+          <tr><td>9–10</td><td>18–20</td><td>🙀 Çətin</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Ulduzlar -->
+    <section class="panel">
+      <h2>Ulduzlar və rekord</h2>
+      <p>Oyunun sonunda hərəkət sayına görə ulduz qazanırsan:</p>
+      <table class="levels">
+        <thead>
+          <tr><th>Ulduz</th><th>Şərt</th><th>Nümunə (8 cüt)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>⭐⭐⭐</td><td>Hərəkət ≤ cüt sayı × 1.5</td><td>12 hərəkətə qədər</td></tr>
+          <tr><td>⭐⭐</td><td>Hərəkət ≤ cüt sayı × 2</td><td>16 hərəkətə qədər</td></tr>
+          <tr><td>⭐</td><td>Daha çox</td><td>17 və daha çox</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Hər səviyyənin öz rekordu var və brauzerdə yadda saxlanılır. 🏆</p>
+    </section>
+
+    <!-- Mövzular -->
+    <section class="panel">
+      <h2>Mövzular</h2>
+      <ul class="themes-list">
+        <li><strong>🐱 Pişiklər</strong> — pişik üzləri bir-birinə çox oxşayır, ona görə ən çətin mövzudur.</li>
+        <li><strong>🐶 Heyvanlar</strong> — müxtəlif heyvanlar.</li>
+        <li><strong>🍓 Meyvələr</strong> — rəngarəng meyvələr.</li>
+        <li><strong>🚀 Kosmos</strong> — planetlər, ulduzlar və raketlər.</li>
+      </ul>
+    </section>
+
+    <!-- Məsləhətlər -->
+    <section class="panel">
+      <h2>Məsləhətlər</h2>
+      <ul class="themes-list">
+        <li>Kartları sıra ilə aç, belə yerlərini yadda saxlamaq asan olur.</li>
+        <li>Açdığın hər kartı yadda saxlamağa çalış, hətta cüt tapılmasa belə.</li>
+        <li>Tələsmə, vaxtdan çox hərəkət sayı vacibdir.</li>
+      </ul>
+    </section>
+
+    <div class="actions">
+      <a href="index.html" class="btn btn-primary">Oyuna başla ▶</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <svg class="peek-cat" viewBox="0 0 120 56" aria-hidden="true">
+      <polygon class="cat-body" points="20,34 28,2 50,24" />
+      <polygon class="cat-body" points="70,24 92,2 100,34" />
+      <polygon class="cat-ear" points="27,26 31,12 42,24" />
+      <polygon class="cat-ear" points="78,24 89,12 93,26" />
+      <ellipse class="cat-body" cx="60" cy="58" rx="44" ry="38" />
+      <ellipse class="cat-eye" cx="44" cy="44" rx="5" ry="7" />
+      <ellipse class="cat-eye" cx="76" cy="44" rx="5" ry="7" />
+      <polygon class="cat-ear" points="56,52 64,52 60,56" />
+    </svg>
+    <p>© 2026 Yaddaş Oyunu · Veb saytların hazırlanması fənni üzrə kurs işi</p>
+  </footer>
+
+  <script src="qaranliq.js"></script>
+</body>
+</html>
